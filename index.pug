@@ -2,13 +2,13 @@ doctype html
 html(lang='pt-br')
   head
     meta(charset='utf-8')
-    meta(name='description', content='')
+    meta(name='description', content='Somos um grupo de nerds, e amamos codificar e dar suporte a boas idéias.')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
     meta(name='format-detection', content='telephone=no')
 
     //- Title
     //- ===================================
-    title
+    title 7Dev - Tapajós Code Studio
 
     //- Favicon and SVG logo
     //- ===================================
@@ -22,6 +22,35 @@ html(lang='pt-br')
 
     section.jumbotron
 
+      header.jumbotron__header
+
+        a.jumbotron__logo(href="/")
+          img.jumbotron__logo__image(src="assets/img/logo.svg", alt="Logo da 7dev")
+
+        nav.jumbotron__menu
+          ul.jumbotron__menu__list
+
+            li.jumbotron__menu__list__item
+              a.jumbotron__menu__list__item__link(href="")  Início
+
+            li.jumbotron__menu__list__item
+              a.jumbotron__menu__list__item__link(href="")  Sobre nós
+
+            li.jumbotron__menu__list__item
+              a.jumbotron__menu__list__item__link(href="")  Serviços
+
+            li.jumbotron__menu__list__item
+              a.jumbotron__menu__list__item__link(href="")  Contato
+
+      div.main
+        h1.main__title  Boas idéias merecem
+          br
+          span.main__title__highlight virar código
+          | .
+        hr.main__line
+        buttom.main__cta  Fale com a gente
+
+
     //- JS scripts
     //- ===================================
     script(async, src='js/index.min.js')
@@ -30,3 +59,5 @@ html(lang='pt-br')
   //- ===================================
   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
   link(rel='stylesheet', href='assets/css/style.min.css')
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i")
+

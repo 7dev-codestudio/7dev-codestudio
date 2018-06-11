@@ -1,4 +1,56 @@
 .jumbotron
-  min-width: 100vw
+  background:
+    image: linear-gradient($jumbotron-overlay, $jumbotron-overlay), url('../img/jumbotron-bg.jpg')
+    position: center
+    size: cover
   min-height: 100vh
-  background-color: #000
+  padding: 50px 75px
+  width: 100vw
+
+.jumbotron__header
+  align-items: center
+  display: flex
+  justify-content: space-between
+
+.jumbotron__menu__list
+  display: flex
+  list-style-type: none
+  padding: 0
+
+.jumbotron__menu__list__item
+  color: $white
+  font-size: 1.2em
+  margin-left: 2em
+
+.jumbotron__menu__list__item__link
+  color: $white
+  text-decoration: none
+  transition: color .3s ease-in-out
+
+  &:hover
+    color: $main-blue
+
+.main__title
+  font-size: 4.5em
+  color: $white
+
+.main__title__highlight
+  color: $main-blue
+
+.main__line
+  width: 440px
+  display: block
+
+.main__cta
+  color: $white
+  background-color: $main-blue
+  padding: .7em 3.5em
+  border-radius: 1.5em
+  font-weight: 700
+  font-size: 1.2em
+  cursor: pointer
+  transition: background-color .3s ease-in-out
+  margin-top: 3em
+
+  &:hover
+    background-color: $main-blue-light
