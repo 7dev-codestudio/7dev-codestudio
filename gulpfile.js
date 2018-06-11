@@ -7,7 +7,6 @@ let gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   imagemin = require('gulp-imagemin'),
   watch = require('gulp-watch'),
-  runSequence = require('run-sequence'),
   browserSync = require('browser-sync').create();
 
 
