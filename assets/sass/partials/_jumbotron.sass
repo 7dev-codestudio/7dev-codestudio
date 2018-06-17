@@ -1,16 +1,22 @@
 .jumbotron
+  align-items: flex-start
   background:
     image: linear-gradient($jumbotron-overlay, $jumbotron-overlay), url('../img/jumbotron-bg.jpg')
     position: center
     size: cover
+  display: flex
+  flex-wrap: wrap
   min-height: 100vh
   padding: 50px 75px
   width: 100vw
 
 .jumbotron__header
+  align-self: flex-start
   align-items: center
   display: flex
   justify-content: space-between
+  max-height: 100px
+  width: 100%
 
 .jumbotron__menu__list
   display: flex
@@ -30,27 +36,36 @@
   &:hover
     color: $main-blue
 
+.main
+  margin-left: 5em
+
 .main__title
   font-size: 4.5em
   color: $white
+  margin-top: 0
 
 .main__title__highlight
   color: $main-blue
 
 .main__line
-  width: 440px
+  width: 60%
+  margin-right: 40%
   display: block
+  align-self: center
 
 .main__cta
-  color: $white
   background-color: $main-blue
-  padding: .7em 3.5em
   border-radius: 1.5em
-  font-weight: 700
-  font-size: 1.2em
+  color: $white
   cursor: pointer
-  transition: background-color .3s ease-in-out
+  display: block
+  font-size: 1.2em
+  font-weight: 700
   margin-top: 3em
+  padding: .7em 3.5em
+  text-align: center
+  transition: background-color .3s ease-in-out
+  width: 25ch
 
   &:hover
     background-color: $main-blue-light
