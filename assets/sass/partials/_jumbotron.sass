@@ -8,7 +8,13 @@
   flex-wrap: wrap
   min-height: 100vh
   padding: 50px 75px
-  width: 100vw
+  min-width: 100vw
+
+  @media (max-width: 800px)
+    justify-content: center
+
+  @media (max-width: 500px)
+    padding: 30px 20px
 
 .jumbotron__header
   align-self: flex-start
@@ -18,10 +24,26 @@
   max-height: 100px
   width: 100%
 
+.jumbotron__logo__image
+  @media (max-width: 800px)
+    width: 100px
+
+.jumbotron__menu__dropdown-buttom
+  display: none
+
+  @media (max-width: 800px)
+    display: block
+
+.jumbotron__menu__dropdown-buttom__image
+  //width: 30px
+
 .jumbotron__menu__list
   display: flex
   list-style-type: none
   padding: 0
+
+  @media (max-width: 800px)
+    display: none
 
 .jumbotron__menu__list__item
   color: $white
@@ -36,13 +58,24 @@
   &:hover
     color: $main-blue
 
+
 .main
   margin-left: 5em
+
+  @media (max-width: 800px)
+    text-align: center
+    margin-left: 0
+
+  @media (max-height: 500px)
+    margin: 4em 0
 
 .main__title
   font-size: 4.5em
   color: $white
   margin-top: 0
+
+  @media (max-width: 800px)
+    font-size: 2.5em
 
 .main__title__highlight
   color: $main-blue
@@ -52,6 +85,10 @@
   margin-right: 40%
   display: block
   align-self: center
+
+  @media (max-width: 800px)
+    margin-right: 20%
+    margin-left: 20%
 
 .main__cta
   background-color: $main-blue
@@ -66,6 +103,18 @@
   text-align: center
   transition: background-color .3s ease-in-out
   width: 25ch
+
+  @media (max-width: 800px)
+    margin-left: auto
+    margin-right: auto
+    margin-top: 2em
+    width: 25ch
+    font-size: 1.5em
+
+  @media (max-width: 500px)
+    width: 18ch
+    padding: .7em
+    font-size: 1.2em
 
   &:hover
     background-color: $main-blue-light
