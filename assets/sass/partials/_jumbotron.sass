@@ -6,7 +6,7 @@
     size: cover
   display: flex
   flex-wrap: wrap
-  min-height: 100vh
+  min-height: 90vh
   padding: 50px 75px
   min-width: 100vw
 
@@ -59,7 +59,7 @@
     color: $main-blue
 
 
-.main
+.jumbotron__main
   margin-left: 5em
 
   @media (max-width: 800px)
@@ -69,7 +69,7 @@
   @media (max-height: 500px)
     margin: 4em 0
 
-.main__title
+.jumbotron__main__title
   font-size: 4.5em
   color: $white
   margin-top: 0
@@ -77,12 +77,12 @@
   @media (max-width: 800px)
     font-size: 2.5em
 
-.main__title__highlight
+.jumbotron__main__title__highlight
   color: $main-blue
 
-.main__line
-  width: 60%
-  margin-right: 40%
+.jumbotron__main__line
+  width: 53%
+  margin-right: 47%
   display: block
   align-self: center
 
@@ -90,7 +90,16 @@
     margin-right: 20%
     margin-left: 20%
 
-.main__cta
+.jumbotron__main_text
+  color: $white
+  font-size: 1.4em
+  width: 60%
+  line-height: 1.5
+
+  @media (max-width: 800px)
+    width: 100%
+
+.jumbotron__main__cta
   background-color: $main-blue
   border-radius: 1.5em
   color: $white

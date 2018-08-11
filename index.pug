@@ -20,7 +20,7 @@ html(lang='pt-br')
 
   body
 
-    section.jumbotron
+    section.jumbotron#home
 
       header.jumbotron__header
 
@@ -35,25 +35,87 @@ html(lang='pt-br')
           ul.jumbotron__menu__list
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="")  Início
+              a.jumbotron__menu__list__item__link(href="#home")  Início
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="")  Sobre nós
+              a.jumbotron__menu__list__item__link(href="#team")  Time
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="")  Serviços
+              a.jumbotron__menu__list__item__link(href="#services")  Serviços
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="")  Contato
+              a.jumbotron__menu__list__item__link(href="#contact")  Contato
 
-      div.main
-        h1.main__title  Boas idéias merecem
+      div.jumbotron__main
+        h1.jumbotron__main__title  Boas idéias merecem
           br
-          span.main__title__highlight virar código
+          span.jumbotron__main__title__highlight virar código
           | .
-        hr.main__line
-        buttom.main__cta  Fale com a gente
+        hr.jumbotron__main__line
+        p.jumbotron__main_text Somos um grupo de nerds, e amamos codificar e dar suporte a boas idéias.
+        buttom.jumbotron__main__cta  Fale com a gente
 
+    section.team#team
+
+      .team__text
+        h2.team__text__title Time
+
+        .team__text__description
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan hendrerit ipsum, varius semper lacus dictum eu. Mauris semper risus non dolor feugiat, ac pulvinar quam varius.
+          p Nullam et nibh nec massa egestas pretium. Aliquam congue leo et aliquet luctus. Ut semper sit amet velit et maximus.
+
+      div.team__images
+        div
+        div
+        div
+        div
+        div
+        div
+        div
+
+    section.services#services
+      h2.services__title Serviços
+
+      .services__card__container
+        .services__card.services__card_development
+          .services__card__img
+          h3.services__card__title Desenvolvimento
+          p.services__card__description Sites e aplicações WEB e mobile para qualquer tipo de negócio e mercado.
+
+        .services__card.services__card_repairment
+          .services__card__img
+          h3.services__card__title Manutenção e Rede
+          p.services__card__description Manutenção em computadores e redes domésticas e comerciais de pequeno e médio porte.
+
+    section.contact#contact
+      h2.contact__title Contato
+
+      .contact__container
+        .contact__info
+          span.contact__info__cta-email-text mande um email para
+          a.contact__info__email contato@7dev.com.br
+
+          .contact__info__social
+            span.contact__info__cta-email-text entre em contato pelas redes sociais
+            .contact__info__social__item.contact__info__social__item_instagram
+            .contact__info__social__item.contact__info__social__item_facebook
+
+        .contact__message
+          span.contact__message__cta-text Ou mande uma mensagem por aqui
+          form.contact__message__form(action="")
+            label(for="nome") Seu nome
+            input.contact__message__form__name(type="text", id="name", placeholder="Maria Izolda da Silva")
+            label(for="email") Seu email
+            input.contact__message__form__email(type="email", id="email", placeholder="mraizolda@coelce.com")
+            label(for="subject") Assunto
+            input.contact__message__form__subject(type="text", id="subject", placeholder="saber mais sobre serviços")
+            label(for="message") Mensagem
+            textarea.contact__message__form__message-content(id="message", name="", cols="30", rows="10")
+            input.contact__message__form__submit(type="submit")
+
+    footer.footer
+      span.footer__copyright 7dev &copy; 2018
+      .footer__social
 
     //- JS scripts
     //- ===================================

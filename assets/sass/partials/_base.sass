@@ -13,8 +13,10 @@ html
 
 body
   display: flex
+  flex-wrap: wrap
   font-family: $montserrat
   height: 100%
+  width: 100vw
   max-width: 100%
   min-height: 100vh
   overflow-x: hidden
@@ -24,3 +26,11 @@ body
 
 a
   text-decoration: none
+
+section
+  padding: 50px 75px
+  min-width: 100vw
+  max-width: 100%
+
+  @media (max-width: 800px)
+    padding: 30px

@@ -1,0 +1,33 @@
+.contact__title
+  font-size: 4em
+
+.contact__container
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+
+input, textarea
+  background-color: red
+  width: 100%
+  border: 0
+  margin-bottom: 20px
+  min-height: 4ch
+  padding: .5ch 1ch
+
+.contact__message__form__name,
+.contact__message__form__email,
+.contact__message__form__subject
+  background-color: transparent
+  border-bottom: 3px solid $gray-text
+
+.contact__message__form__message-content
+  background-color: transparent
+  border: 3px solid $gray-text
+
+  &:selected,
+  &:active,
+  &:focus
+    border-bottom-color: $black
+
+.contact__message__form__submit
+  background-color: $main-blue
