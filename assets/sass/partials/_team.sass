@@ -3,8 +3,9 @@
   background-color: $white
   display: grid
   grid-gap: 60px
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
   min-height: 90vh
+  padding-bottom: 50px
 
 .team__text__title
   font-size: 4em
@@ -17,10 +18,13 @@
   line-height: 1.5
 
 .team__images
+  border: 20px solid $main-blue
   background-color: $main-blue
-  min-height: 100%
-  width: 100%
+  max-width: 100%
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-template-rows: repeat(3, 1fr)
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
   grid-gap: 20px
+
+
+.team__images img
+  width: 100%

@@ -35,16 +35,16 @@ html(lang='pt-br')
           ul.jumbotron__menu__list
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="#home")  Início
+              a.jumbotron__menu__list__item__link(data-scroll, href="#home")  Início
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="#team")  Time
+              a.jumbotron__menu__list__item__link(data-scroll, href="#team")  Time
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="#services")  Serviços
+              a.jumbotron__menu__list__item__link(data-scroll, href="#services")  Serviços
 
             li.jumbotron__menu__list__item
-              a.jumbotron__menu__list__item__link(href="#contact")  Contato
+              a.jumbotron__menu__list__item__link(data-scroll, href="#contact")  Contato
 
       div.jumbotron__main
         h1.jumbotron__main__title  Boas idéias merecem
@@ -58,7 +58,7 @@ html(lang='pt-br')
     section.team#team
 
       .team__text
-        h2.team__text__title Time
+        h2.team__text__title.section-title Time
 
         .team__text__description
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan hendrerit ipsum, varius semper lacus dictum eu. Mauris semper risus non dolor feugiat, ac pulvinar quam varius.
@@ -66,15 +66,23 @@ html(lang='pt-br')
 
       div.team__images
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
         div
+          img(src="assets/img/user.png", alt="")
+
 
     section.services#services
-      h2.services__title Serviços
+      h2.services__title.section-title Serviços
 
       .services__card__container
         .services__card.services__card_development
@@ -88,17 +96,17 @@ html(lang='pt-br')
           p.services__card__description Manutenção em computadores e redes domésticas e comerciais de pequeno e médio porte.
 
     section.contact#contact
-      h2.contact__title Contato
+      h2.contact__title.section-title Contato
 
       .contact__container
         .contact__info
           span.contact__info__cta-email-text mande um email para
-          a.contact__info__email contato@7dev.com.br
+          a.contact__info__email(href="#") contato@7dev.com.br
 
           .contact__info__social
             span.contact__info__cta-email-text entre em contato pelas redes sociais
-            .contact__info__social__item.contact__info__social__item_instagram
-            .contact__info__social__item.contact__info__social__item_facebook
+            a.contact__info__social__item.contact__info__social__item_instagram(href="")
+            a.contact__info__social__item.contact__info__social__item_facebook(href="")
 
         .contact__message
           span.contact__message__cta-text Ou mande uma mensagem por aqui
@@ -111,7 +119,7 @@ html(lang='pt-br')
             input.contact__message__form__subject(type="text", id="subject", placeholder="saber mais sobre serviços")
             label(for="message") Mensagem
             textarea.contact__message__form__message-content(id="message", name="", cols="30", rows="10")
-            input.contact__message__form__submit(type="submit")
+            input.contact__message__form__submit(type="submit", value="Enviar")
 
     footer.footer
       span.footer__copyright 7dev &copy; 2018
@@ -119,6 +127,9 @@ html(lang='pt-br')
 
     //- JS scripts
     //- ===================================
+    script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js")
+    script.
+      var scroll = new SmoothScroll('.jumbotron__menu__list__item__link');
     script(async, src='js/index.min.js')
 
   //- Stylesheet and fonts
