@@ -7,6 +7,14 @@
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
 
+.contact__info__cta-email-text,
+.contact__info__cta-social-text,
+.contact__message__cta-text
+  font-size: 1.2em
+  margin-bottom: 20px
+  color: $gray-text
+  display: block
+
 .contact__info__email
   display: block
   width: 100%
@@ -15,44 +23,59 @@
   text-decoration: none
   color: $main-blue
   word-break: break-all
+  transition: opacity .3s ease-in-out
   @media (max-width: 500px)
     font-size: 1.7em
+  &:hover
+    opacity: .7
 
+.contact__info__social__item
+  width: 50px
+  font-size: 3em
+  margin: .4em 0
+  margin-right: 1em
+  display: inline-block
+  transition: opacity .3s ease-in-out
+  &:hover
+    opacity: .7
 
-.contact__container input,
-.contact__container textarea
+.contact__info__social__item img
   width: 100%
-  border: 0
-  margin-bottom: 20px
-  min-height: 4ch
-  padding: .5ch 1ch
 
-.contact__container textarea
-  margin-top: .5em
 
-.contact__container label
-  color: $gray-text
+.contact__message__form label
+  text-indent: 2ch
+  display: block
+  color: $black
+  font-weight: 400
 
-.contact__message__form__name,
-.contact__message__form__email,
-.contact__message__form__subject
-  background-color: transparent
-  border-bottom: 3px solid $gray-text
-
-.contact__message__form__message-content
-  background-color: transparent
-  border: 3px solid $gray-text
-
-  &:selected,
-  &:active,
+.contact__message__form input,
+.contact__message__form textarea
+  margin-top: 8px
+  margin-bottom: 1.3em
+  width: 100%
+  border: 1px solid #d3d3d3
+  background-color: #f5f5f5
   &:focus
-    border-bottom-color: $black
+    outline: unset
+    border-color: $main-blue
+    background-color: $white
 
-.contact__message__form__submit
-  background-color: $main-blue
+.contact__message__form input
+  padding: 1.5ch 2ch
+  border-radius: 30px
+
+.contact__message__form textarea
+  padding: 2ch
+  border-radius: 5px
+
+.contact__message__form input[type='submit']
   color: $white
+  background-color: $main-blue
   font-weight: bold
+  border: 0
   cursor: pointer
   transition: opacity .3s ease-in-out
+  font-size: 1.4em
   &:hover
     opacity: .7

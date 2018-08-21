@@ -30,7 +30,7 @@ html(lang='pt-br')
         nav.jumbotron__menu
 
           a.jumbotron__menu__dropdown-buttom(href="")
-            img.jumbotron__menu__dropdown-buttom__image(src="assets/img/menu.svg", alt="Botão do menu")
+            img.jumbotron__menu__dropdown-buttom__image(src="assets/img/icon/menu.svg", alt="Botão do menu")
 
           ul.jumbotron__menu__list
 
@@ -53,7 +53,7 @@ html(lang='pt-br')
           | .
         hr.jumbotron__main__line
         p.jumbotron__main_text Somos um grupo de nerds, e amamos codificar e dar suporte a boas idéias.
-        buttom.jumbotron__main__cta  Fale com a gente
+        a.jumbotron__main__cta(href="#contact", data-scroll)  Fale com a gente
 
     section.team#team
 
@@ -101,12 +101,14 @@ html(lang='pt-br')
       .contact__container
         .contact__info
           span.contact__info__cta-email-text mande um email para
-          a.contact__info__email(href="#") contato@7dev.com.br
+          a.contact__info__email(href="mailto:7dev.info@gmail.com") 7dev.info@gmail.com
 
           .contact__info__social
-            span.contact__info__cta-email-text entre em contato pelas redes sociais
-            a.contact__info__social__item.contact__info__social__item_instagram(href="")
-            a.contact__info__social__item.contact__info__social__item_facebook(href="")
+            span.contact__info__cta-social-text entre em contato pelas redes sociais
+            a.contact__info__social__item.contact__info__social__item_instagram(href="http://instagram.com/sete.dev", rel="noopener", target="_blank")
+              img(src="assets/img/icon/instagram.svg", alt="Logo do instagram")
+            a.contact__info__social__item.contact__info__social__item_facebook(href="https://www.facebook.com/sete.dev/", rel="noopener", target="_blank")
+              img(src="assets/img/icon/facebook.svg", alt="Logo do facebook")
 
         .contact__message
           span.contact__message__cta-text Ou mande uma mensagem por aqui
@@ -130,6 +132,7 @@ html(lang='pt-br')
     script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js")
     script.
       var scroll = new SmoothScroll('.jumbotron__menu__list__item__link');
+      var scroll = new SmoothScroll('.jumbotron__main__cta');
     script(async, src='js/index.min.js')
 
   //- Stylesheet and fonts
